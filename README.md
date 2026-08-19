@@ -4,6 +4,12 @@ A vendor-neutral portfolio project for diagnosing the health of an enterprise re
 
 The project focuses on a common operational problem: **an assistant may appear healthy at the model layer while retrieval quality, prompt growth, caching, tool dependencies, or retry behavior are quietly degrading the user experience.**
 
+## Product preview
+
+![Enterprise RAG Assistant Health Monitor dashboard](ChatGPT%20Image%20Aug%2018%2C%202026%2C%2005_58_08%20PM.png)
+
+*Concept preview of the Streamlit monitoring experience. The runnable app in this repository uses synthetic telemetry and exposes the same core operational signals: traffic, latency, retrieval/context health, cache efficiency, dependency failures, quality signals, and readiness gates.*
+
 ## What this project demonstrates
 
 - RAG system observability beyond basic model latency
@@ -87,8 +93,8 @@ python -m pytest -q
 app.py                    Streamlit health dashboard
 src/health.py             Metric aggregation and readiness logic
 data/sample_requests.csv  Synthetic telemetry
- tests/test_health.py       Offline unit tests
-.github/workflows/ci.yml   CI validation
+tests/test_health.py      Offline unit tests
+.github/workflows/ci.yml  CI validation
 ```
 
 ## Readiness framework
